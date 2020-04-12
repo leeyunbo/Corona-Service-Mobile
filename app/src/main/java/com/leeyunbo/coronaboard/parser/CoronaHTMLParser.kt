@@ -22,16 +22,16 @@ var trustAllCerts: Array<TrustManager> = arrayOf(object : X509TrustManager {
 
 fun parseHtmlTags(url : String) : CoronaBoard {
     val sc : SSLContext = SSLContext.getInstance("SSL")
-    var todayConfirmer: Int = 0
-    var todayHealer: Int = 0
-    var confirmer: Int = 0
-    var healer: Int = 0
-    var healing: Int = 0
-    var dead: Int = 0
-    var addHealerCnt: String = ""
-    var addHealingCnt: String = ""
-    var addConfirmerCnt: String = ""
-    var addDeadCnt: String = ""
+    lateinit var todayConfirmer: String
+    lateinit var todayHealer: String
+    lateinit var confirmer: String
+    lateinit var healer: String
+    lateinit var healing: String
+    lateinit var dead: String
+    lateinit var addHealerCnt: String
+    lateinit var addHealingCnt: String
+    lateinit var addConfirmerCnt: String
+    lateinit var addDeadCnt: String
 
     sc.init(null, trustAllCerts, SecureRandom())
     HttpsURLConnection.setDefaultSSLSocketFactory(sc.socketFactory)
@@ -41,13 +41,13 @@ fun parseHtmlTags(url : String) : CoronaBoard {
         val every: Elements = doc.select("div.liveNum ul.liveNum li")
 
         today.forEachIndexed { index, element ->
-            var data = element.select("span.data${index+1}").text().toInt()
+            var data = element.select("span.data${index+1}").text()
             if(index==1) todayConfirmer = data
             else todayHealer = data
         }
 
         every.forEachIndexed { index, element ->
-            var num = element.select("span.num").text().toInt()
+            var num = element.select("span.num").text()
             var before = element.select("span.before").text()
             when(index) {
                 0 -> {

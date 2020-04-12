@@ -1,12 +1,12 @@
 package com.leeyunbo.coronaboard.data
 
 data class CoronaBoard(
-    var todayConfirmer: Int,
-    var todayHealer: Int,
-    var confirmer: Int,
-    var cealer: Int,
-    var healing: Int,
-    var dead: Int,
+    var todayConfirmer: String,
+    var todayHealer: String,
+    var confirmer: String,
+    var cealer: String,
+    var healing: String,
+    var dead: String,
     var addHealingCnt: String,
     var addHealerCnt: String,
     var addConfirmerCnt: String,
