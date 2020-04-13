@@ -42,28 +42,28 @@ fun parseHtmlTags(url : String) : CoronaBoard {
 
         today.forEachIndexed { index, element ->
             var data = element.select("span.data${index+1}").text()
-            if(index==1) todayConfirmer = data
-            else todayHealer = data
+            if(index==1) todayConfirmer = "일일 확진자 ${data}"
+            else todayHealer = "일일 완치자 ${data}"
         }
 
         every.forEachIndexed { index, element ->
-            var num = element.select("span.num").text()
-            var before = element.select("span.before").text()
+            var num = element.select("span.num").text().replace("(누적)","")
+            var before = element.select("span.before").text().replace("전일대비","").replace(" ","")
             when(index) {
                 0 -> {
-                    confirmer = num
+                    confirmer = "확진환자\n${num}\n${before}"
                     addConfirmerCnt = before
                 }
                 1 -> {
-                    healer = num
+                    healer = "완치(격리해제)\n${num}\n${before}"
                     addHealerCnt = before
                 }
                 2 -> {
-                    healing = num
+                    healing = "치료중(격리 중)\n${num}\n${before}"
                     addHealingCnt = before
                 }
                 3 -> {
-                    dead = num
+                    dead = "사망\n${num}\n${before}"
                     addDeadCnt = before
                 }
             }
