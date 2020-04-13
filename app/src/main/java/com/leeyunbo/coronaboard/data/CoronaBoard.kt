@@ -7,8 +7,9 @@ data class CoronaBoard(
     var healer: String,
     var healing: String,
     var dead: String,
-    var addHealingCnt: String,
-    var addHealerCnt: String,
-    var addConfirmerCnt: String,
-    var addDeadCnt: String)
+    var liveTime: String,
+    var check: String,
+    var checkComplete: String,
+    var confirmRate: String
+)
 
