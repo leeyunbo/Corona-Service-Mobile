@@ -1,5 +1,6 @@
 package com.leeyunbo.coronaboard.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -32,5 +33,9 @@ class MainActivity : AppCompatActivity() {
                 viewModel.doAction()
             }.await()
         }
+
+
+        val intent = Intent(this, MapActivity::class.java)
+        startActivity(intent)
     }
 }

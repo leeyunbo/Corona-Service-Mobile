@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/colormap"
+        tools:context=".view.MapActivity">
+
+    <TextView
+            android:text="경기"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kyounggi_tv"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:text="서울"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/seoul_tv"
+            app:layout_constraintTop_toBottomOf="@id/kyounggi_tv"
+            app:layout_constraintEnd_toStartOf="@id/kyounggi_tv"/>
+
+    <TextView
+            android:text="강원"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/kangwon_tv"
+            app:layout_constraintBottom_toTopOf="@id/seoul_tv"
+            app:layout_constraintStart_toEndOf="@id/kyounggi_tv"/>
+
+    <TextView
+            android:text="인천"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/incheon_tv"
+            app:layout_constraintEnd_toStartOf="@id/seoul_tv"
+            app:layout_constraintTop_toTopOf="@id/seoul_tv"/>
+    <TextView
+            android:text="세종"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/sejong_tv"
+            app:layout_constraintStart_toEndOf="@id/seoul_tv"
+            app:layout_constraintTop_toBottomOf="@id/seoul_tv"/>
+    <TextView
+            android:text="충남"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chungnam_tv"
+            app:layout_constraintStart_toEndOf="@id/incheon_tv"
+            app:layout_constraintTop_toBottomOf="@id/sejong_tv"/>
+    <TextView
+            android:text="충북"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/chungbok_tv"
+            app:layout_constraintBottom_toTopOf="@id/sejong_tv"
+            app:layout_constraintStart_toEndOf="@id/sejong_tv"/>
+    <!--
+<TextView
+    android:text="경북"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/kyoungbok_tv"
+    android:layout_marginEnd="96dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/daejeon_tv"/>
+<TextView
+    android:text="대전"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/daejeon_tv"
+    app:layout_constraintEnd_toStartOf="@+id/deagu_tv"
+    android:layout_marginEnd="13dp"
+    android:layout_marginBottom="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/deagu_tv"/>
+<TextView
+    android:text="전북"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/jeonbok_tv"
+    app:layout_constraintEnd_toStartOf="@+id/kyoungnam_tv"
+    android:layout_marginEnd="19dp"
+    android:layout_marginBottom="15dp"
+    app:layout_constraintBottom_toTopOf="@+id/kyoungnam_tv"/>
+<TextView
+    android:text="광주"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/kwangju_tv"
+    android:layout_marginStart="8dp"
+    app:layout_constraintStart_toEndOf="@+id/jeonnam_tv"
+    android:layout_marginBottom="13dp"
+    app:layout_constraintBottom_toTopOf="@+id/jeonnam_tv"/>
+<TextView
+    android:text="전남"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/jeonnam_tv"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginStart="77dp"
+    android:layout_marginBottom="216dp"/>
+<TextView
+    android:text="제주"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/jeju_tv"
+    app:layout_constraintStart_toStartOf="@+id/jeonbok_tv"
+    android:layout_marginTop="59dp"
+    app:layout_constraintTop_toBottomOf="@+id/jeonnam_tv"
+    app:layout_constraintEnd_toEndOf="@+id/jeonbok_tv"/>
+<TextView
+    android:text="경남"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/kyoungnam_tv"
+    app:layout_constraintStart_toEndOf="@+id/kwangju_tv"
+    android:layout_marginBottom="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/busan_tv"/>
+<TextView
+    android:text="울산"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ulsan_tv"
+    app:layout_constraintStart_toEndOf="@+id/daejeon_tv"
+    android:layout_marginBottom="17dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/kwangju_tv"
+    android:layout_marginStart="58dp"
+    android:layout_marginEnd="59dp"
+/>
+<TextView
+    android:text="부산"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/busan_tv"
+    android:layout_marginTop="17dp"
+    app:layout_constraintTop_toBottomOf="@+id/ulsan_tv"
+    app:layout_constraintEnd_toEndOf="@+id/ulsan_tv"
+    app:layout_constraintStart_toStartOf="@+id/kyoungnam_tv"
+    android:layout_marginStart="45dp"
+    android:layout_marginEnd="45dp"/>
+<TextView
+    android:text="대구"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/deagu_tv"
+    android:layout_marginEnd="14dp"
+    android:layout_marginBottom="34dp"
+    app:layout_constraintEnd_toEndOf="@+id/kyoungbok_tv"
+    app:layout_constraintBottom_toTopOf="@+id/ulsan_tv"/> -->
+</androidx.constraintlayout.widget.ConstraintLayout>
