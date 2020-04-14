@@ -45,8 +45,8 @@ fun parseHtmlTags(url : String) : CoronaBoard {
 
         todayElement.forEachIndexed { index, element ->
             var data = element.select("span.data${index+1}").text()
-            if(index==1) todayConfirmer = "일일 확진자 ${data}"
-            else todayHealer = "일일 완치자 ${data}"
+            if(index==1) todayHealer = "일일 완치자 ${data}"
+            else todayConfirmer = "일일 확진자 ${data}"
         }
 
         everyElement.forEachIndexed { index, element ->
