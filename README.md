@@ -17,3 +17,8 @@
 
 ### 참고한 페이지
 1. [코로나 웹 사이트](http://ncov.mohw.go.kr/ "코로나바이러스감염증-19(COVID-19)")
+
+
+### 애플리케이션 화면 
+
+![CoronaMobile](https://user-images.githubusercontent.com/44944031/87564439-5bf38b80-c6fb-11ea-908b-2635083e3946.png)
